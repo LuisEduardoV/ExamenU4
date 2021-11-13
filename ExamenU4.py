@@ -36,16 +36,28 @@ class Gerente(Empleado):
         print("Hola mi nombre es", self.__nombre,"tengo", self.__edad,"años")
         print("ocupo el puesto de gerente","soy", self.__sexo,"y mido",self.__estatura)
 class preguntas:
-    def __init__(self,Pregunta1,Pregunta2,Pregunta3,Pregunta4,Pregunta5):
-        self.__Pregunta1 = Pregunta1
-        self.__Pregunta2 = Pregunta2
-        self.__Pregunta3 = Pregunta3
-        self.__Pregunta4 = Pregunta4
-        self.__Pregunta5 = Pregunta5
-
+    def __init__(self,P1,P2,P3,P4,P5,P6,P7,P8,P9,P10):
+        self.P1 = P1
+        self.P2 = P2
+        self.P3 = P3
+        self.P4 = P4
+        self.P5 = P5
+        self.P6 = P6
+        self.P7 = P7
+        self.P8 = P8
+        self.P9 = P9
+        self.P10 = P10
     def hacerEntrevista(self):
-        print("Ahora le voy hacer una entrevista....")
-
+        print("Pregunta1: ", self.P1)
+        print("Pregunta1: ", self.P2)
+        print("Pregunta1: ", self.P3)
+        print("Pregunta1: ", self.P4)
+        print("Pregunta1: ", self.P5)
+        print("Pregunta1: ", self.P6)
+        print("Pregunta1: ", self.P7)
+        print("Pregunta1: ", self.P8)
+        print("Pregunta1: ", self.P9)
+        print("Pregunta1: ", self.P10)
 
 class saco:
     def __init__(self,medida,color,botones):
@@ -64,6 +76,24 @@ if (condicion == '1'):
     print("---------------------------------------------------------------------------------")
     gerente1 = Gerente(Nombre)
     gerente1.info()
+    print("---------------------------------------------------------------------------------")
+    print("Ahora le haré algunas preguntas...")
+    P1 = input("Pregunta 1.- ¿Cuál es su nombre?: ")
+    P2 = input("Pregunta 2.- ¿Dónde vive?: ")
+    P3 = input("Pregunta 3.- ¿Qúe grado de estudio tiene?: ")
+    P4 = input("Pregunta 4.- ¿Por qué te interesa el puesto?: ")
+    P5 = input("Pregunta 5.- ¿Qué sabes de nuestra empresa?: ")
+    P6 = input("Pregunta 6: ¿Qué te gusta hacer en tu tiempo libre?: ")
+    P7 = input("Pregunta 7.- ¿Cuál es tu meta en la vida?: ")
+    P8 = input("Pregunta 8.- ¿Cómo manejas la presión?: ")
+    P9 = input("Pregunta 9.- ¿Cuál es tu mayor debilidad o defecto?: ")
+    P10 = input("Pregunta 10.- ¿Por qué deberíamos contratarte?: ")
+    Entrevista1 = preguntas(P1,P2,P3,P4,P5)
+    Entrevista1.hacerEntrevista()
+    print("Se han guardado sus respuestas con exito")
+
+
+
 
 else:
     print("Hasta luego, que tenga exelente día")
