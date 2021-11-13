@@ -11,15 +11,17 @@ class Empleado(Empresa):
     def __init__(self, puesto):
         self.__puesto = puesto
 
+    def getPuesto(self):
+        self.__puesto()
+
 
 class Gerente(Empleado):
-    def __init__(self, nombre, sexo,puesto,edad =('25'), estatura = ('1.80m')):
+    def __init__(self, nombre,puesto=None, sexo='hombre',edad ='25', estatura = '1.80m'):
         super().__init__(puesto)
         self.__nombre = nombre
         self.__edad = edad
         self.__sexo = sexo
         self.__estatura = estatura
-
 
     def getNombre(self):
         self.__nombre()
@@ -31,22 +33,18 @@ class Gerente(Empleado):
         self.__estatura()
 
     def info(self):
-        print("Hola mi nombre es: ", self.__nombre)
-        print("Tengo", self.__edad,"años")
-        print("Mi genero es: ", self.__sexo)
-        print("Y mi estatura es: ",self.__estatura)
+        print("Hola mi nombre es", self.__nombre,"tengo", self.__edad,"años")
+        print("ocupo el puesto de gerente","soy", self.__sexo,"y mido",self.__estatura)
 
 print("Hola vienvenido a la empresa TRES HERMANOS ")
-condicion = input("Hola qué tal, si usted desea ingresar a nuestra empresa presione la tecla 1,"
-                " sino presiones cualquier tecla")
+print("Si usted desea trabajar en la empresa presione la tecla 1")
+condicion = input("sino presione cualquier tecla: ")
 if (condicion == '1'):
     print("Hola usted a decidido ingresar a nuestra empresa,")
     print("ahora vendra un personal para atenderlo")
     Nombre = input("Porfavor ingrese el nombre de la persona que lo atendera: ")
-    Sexo = input("Porfavor ingrese el genero de la persona que desee que lo atienda: ")
-    Puesto = input("El puesto es: ")
 
-    gerente1 = Gerente(Nombre, Sexo,Puesto)
+    gerente1 = Gerente(Nombre)
     gerente1.info()
 else:
     print("Hasta luego, que tenga exelente día")
