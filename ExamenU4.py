@@ -16,8 +16,6 @@ class Empresa:
 NombreEmpresa1=Empresa('TRES HERMANOS')
 NombreEmpresa1.NombreEmpresa()
 
-
-
 class Empleado(Empresa):
     def __init__(self, puesto):
         self.__puesto = puesto
@@ -25,7 +23,7 @@ class Empleado(Empresa):
     def getPuesto(self):
         self.__puesto()
 
-class Gerente(Empleado):
+class Puesto(Empleado):
     def __init__(self, nombre,puesto, sexo,edad, estatura):
         super().__init__(puesto)
         self.__nombre = nombre
@@ -89,7 +87,7 @@ if (condicion == 'Si') or (condicion == 'si') or (condicion == 'SI'):
     print("ahora vendra un personal para atenderlo")
     Nombre = input("Porfavor ingrese el nombre de la persona que lo atendera: ")
     print("---------------------------------------------------------------------------------")
-    gerente1 = Gerente(Nombre,'Gerente','Hombre','25','1.80m')
+    gerente1 = Puesto(Nombre,'Gerente','Hombre','25','1.80m')
     gerente1.info()
     saco1.vestir()
     print("---------------------------------------------------------------------------------")
@@ -107,11 +105,24 @@ if (condicion == 'Si') or (condicion == 'si') or (condicion == 'SI'):
 
     Entrevista1 = preguntas(P1,P2,P3,P4,P5,P6,P7,P8,P9,P10)
     Entrevista1.hacerEntrevista()
+    with open('Registro.csv', 'w', newline='') as csvfile:
+        spamwriter = csv.writer(csvfile)
+        spamwriter.writerow([f'Pregunta 1.- ¿Cuál es su nombre?: {P1}'])
+        spamwriter.writerow([f'Pregunta 2.- ¿Dónde vive?: {P2}'])
+        spamwriter.writerow([f'Pregunta 3.- ¿Qúe grado de estudio tiene?: {P3}'])
+        spamwriter.writerow([f'Pregunta 4.- ¿Por qué te interesa el puesto?: {P4}'])
+        spamwriter.writerow([f'Pregunta 5.- ¿Qué sabes de nuestra empresa?:  {P5}'])
+        spamwriter.writerow([f'Pregunta 6: ¿Qué te gusta hacer en tu tiempo libre?: {P6}'])
+        spamwriter.writerow([f'Pregunta 7.- ¿Cuál es tu meta en la vida?: {P7}'])
+        spamwriter.writerow([f'Pregunta 8.- ¿Cómo manejas la presión?: {P8}'])
+        spamwriter.writerow([f'Pregunta 9.- ¿Cuál es tu mayor debilidad o defecto?: {P9}'])
+        spamwriter.writerow([f'Pregunta 10.- ¿Por qué deberíamos contratarte?: {P10}'])
 
     print("---------------------------------------------------------------------------------")
     print("Se han guardado sus respuestas con exito")
     print("---------------------------------------------------------------------------------")
     print(f"Hola {P1} usted ya es integrante de nuestra empresa")
+    print()
 
 
 else:
