@@ -22,6 +22,8 @@ class Empleado(Empresa):
 
     def getPuesto(self):
         self.__puesto()
+    def setPuesto(self, nuevoPuesto):
+        self.__puesto = nuevoPuesto
 
 class Puesto(Empleado):
     def __init__(self, nombre,puesto, sexo,edad, estatura):
@@ -40,6 +42,10 @@ class Puesto(Empleado):
         self.__sexo()
     def getEstatura(self):
         self.__estatura()
+    def setEdad(self,nuevaEdad):
+        self.__edad = nuevaEdad
+    def setEstatura(self, nuevaEstatura):
+        self.__estatura = nuevaEstatura
 
     def info(self):
         print("Hola mi nombre es", self.__nombre,"tengo", self.__edad,"años")
@@ -87,14 +93,14 @@ if (condicion == 'Si') or (condicion == 'si') or (condicion == 'SI'):
     print("ahora vendra un personal para atenderlo")
     Nombre = input("Porfavor ingrese el nombre de la persona que lo atendera: ")
     print("---------------------------------------------------------------------------------")
-    gerente1 = Puesto(Nombre,'Gerente','Hombre','25','1.80m')
+    gerente1 = Puesto(Nombre,'gerente','hombre','25','1.80m')
     gerente1.info()
     saco1.vestir()
     print("---------------------------------------------------------------------------------")
     print("Ahora le haré algunas preguntas...")
     P1 = input("Pregunta 1.- ¿Cuál es su nombre?: ")
     P2 = input("Pregunta 2.- ¿Dónde vive?: ")
-    P3 = input("Pregunta 3.- ¿Qúe grado de estudio tiene?: ")
+    P3 = input("Pregunta 3.- ¿Qué grado de estudio tiene?: ")
     P4 = input("Pregunta 4.- ¿Por qué te interesa el puesto?: ")
     P5 = input("Pregunta 5.- ¿Qué sabes de nuestra empresa?: ")
     P6 = input("Pregunta 6: ¿Qué te gusta hacer en tu tiempo libre?: ")
@@ -107,16 +113,16 @@ if (condicion == 'Si') or (condicion == 'si') or (condicion == 'SI'):
     Entrevista1.hacerEntrevista()
     with open('Registro.csv', 'w', newline='') as csvfile:
         spamwriter = csv.writer(csvfile)
-        spamwriter.writerow([f'Pregunta 1.- ¿Cuál es su nombre?: {P1}'])
-        spamwriter.writerow([f'Pregunta 2.- ¿Dónde vive?: {P2}'])
-        spamwriter.writerow([f'Pregunta 3.- ¿Qúe grado de estudio tiene?: {P3}'])
+        spamwriter.writerow([f'Pregunta 1.- ¿Cual es su nombre?: {P1}'])
+        spamwriter.writerow([f'Pregunta 2.- ¿Donde vive?: {P2}'])
+        spamwriter.writerow([f'Pregunta 3.- ¿Que grado de estudio tiene?: {P3}'])
         spamwriter.writerow([f'Pregunta 4.- ¿Por qué te interesa el puesto?: {P4}'])
-        spamwriter.writerow([f'Pregunta 5.- ¿Qué sabes de nuestra empresa?:  {P5}'])
-        spamwriter.writerow([f'Pregunta 6: ¿Qué te gusta hacer en tu tiempo libre?: {P6}'])
-        spamwriter.writerow([f'Pregunta 7.- ¿Cuál es tu meta en la vida?: {P7}'])
-        spamwriter.writerow([f'Pregunta 8.- ¿Cómo manejas la presión?: {P8}'])
-        spamwriter.writerow([f'Pregunta 9.- ¿Cuál es tu mayor debilidad o defecto?: {P9}'])
-        spamwriter.writerow([f'Pregunta 10.- ¿Por qué deberíamos contratarte?: {P10}'])
+        spamwriter.writerow([f'Pregunta 5.- ¿Que sabes de nuestra empresa?:  {P5}'])
+        spamwriter.writerow([f'Pregunta 6.- ¿Que te gusta hacer en tu tiempo libre?: {P6}'])
+        spamwriter.writerow([f'Pregunta 7.- ¿Cual es tu meta en la vida?: {P7}'])
+        spamwriter.writerow([f'Pregunta 8.- ¿Como manejas la presión?: {P8}'])
+        spamwriter.writerow([f'Pregunta 9.- ¿Cual es tu mayor debilidad o defecto?: {P9}'])
+        spamwriter.writerow([f'Pregunta 10.- ¿Por que deberíamos contratarte?: {P10}'])
 
     print("---------------------------------------------------------------------------------")
     print("Se han guardado sus respuestas con exito")
@@ -127,14 +133,3 @@ if (condicion == 'Si') or (condicion == 'si') or (condicion == 'SI'):
 
 else:
     print("Hasta luego, que tenga exelente día")
-
-
-
-
-
-
-
-
-
-
-
