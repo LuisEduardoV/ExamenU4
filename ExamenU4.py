@@ -100,7 +100,7 @@ if (condicion == 'Si') or (condicion == 'si') or (condicion == 'SI'):
     print("Ahora le haré algunas preguntas...")
     P1 = input("Pregunta 1.- ¿Cuál es su nombre?: ")
     P2 = input("Pregunta 2.- ¿Dónde vive?: ")
-    P3 = input("Pregunta 3.- ¿Qué grado de estudio tiene?: ")
+    P3 = input("Pregunta 3.- ¿Qué  grado de estudio tiene?: ")
     P4 = input("Pregunta 4.- ¿Por qué te interesa el puesto?: ")
     P5 = input("Pregunta 5.- ¿Qué sabes de nuestra empresa?: ")
     P6 = input("Pregunta 6: ¿Qué te gusta hacer en tu tiempo libre?: ")
