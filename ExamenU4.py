@@ -1,7 +1,7 @@
 """
 Examen unidad 4
 En este programa se verá la interacción de un
-generente al entrevistar a una persona que sera nuevo empleado
+gerente al entrevistar a una persona que será nuevo empleado
 """
 import csv
 class Empresa:
@@ -12,7 +12,7 @@ class Empresa:
         self.__NombreEmpresa = nuevoNombre
 
     def NombreEmpresa(self):
-        print("Hola vienvenido a la empresa",self.__NombreEmpresa,"donde fabricamos todo tipo de prenda")
+        print("Hola bienvenido a la empresa",self.__NombreEmpresa,"donde fabricamos todo tipo de prenda")
 NombreEmpresa1=Empresa('TRES HERMANOS')
 NombreEmpresa1.NombreEmpresa()
 
@@ -65,7 +65,7 @@ class preguntas:
     def hacerEntrevista(self):
         print("Pregunta 1.- ¿Cuál es su nombre?: ", self.P1)
         print("Pregunta 2.- ¿Dónde vive?: ", self.P2)
-        print("Pregunta 3.- ¿Qúe grado de estudio tiene?: ", self.P3)
+        print("Pregunta 3.- ¿Qué grado de estudio tiene?: ", self.P3)
         print("Pregunta 4.- ¿Por qué te interesa el puesto?: ", self.P4)
         print("Pregunta 5.- ¿Qué sabes de nuestra empresa?: ", self.P5)
         print("Pregunta 6: ¿Qué te gusta hacer en tu tiempo libre?: ", self.P6)
@@ -89,9 +89,9 @@ print("Si usted desea trabajar en la empresa escriba [Si]")
 condicion = input("sino presione cualquier tecla: ")
 print("---------------------------------------------------------------------------------")
 if (condicion == 'Si') or (condicion == 'si') or (condicion == 'SI'):
-    print("Hola usted a decidido ingresar a nuestra empresa,")
+    print("Hola usted ha decidido ingresar a nuestra empresa,")
     print("ahora vendra un personal para atenderlo")
-    Nombre = input("Porfavor ingrese el nombre de la persona que lo atendera: ")
+    Nombre = input("Porfavor ingrese el nombre de la persona que lo atenderá: ")
     print("---------------------------------------------------------------------------------")
     gerente1 = Puesto(Nombre,'gerente','hombre','25','1.80m')
     gerente1.info()
@@ -116,7 +116,7 @@ if (condicion == 'Si') or (condicion == 'si') or (condicion == 'SI'):
         spamwriter.writerow([f'Pregunta 1.- ¿Cual es su nombre?: {P1}'])
         spamwriter.writerow([f'Pregunta 2.- ¿Donde vive?: {P2}'])
         spamwriter.writerow([f'Pregunta 3.- ¿Que grado de estudio tiene?: {P3}'])
-        spamwriter.writerow([f'Pregunta 4.- ¿Por qué te interesa el puesto?: {P4}'])
+        spamwriter.writerow([f'Pregunta 4.- ¿Por que te interesa el puesto?: {P4}'])
         spamwriter.writerow([f'Pregunta 5.- ¿Que sabes de nuestra empresa?:  {P5}'])
         spamwriter.writerow([f'Pregunta 6.- ¿Que te gusta hacer en tu tiempo libre?: {P6}'])
         spamwriter.writerow([f'Pregunta 7.- ¿Cual es tu meta en la vida?: {P7}'])
@@ -132,4 +132,4 @@ if (condicion == 'Si') or (condicion == 'si') or (condicion == 'SI'):
 
 
 else:
-    print("Hasta luego, que tenga exelente día")
+    print("Hasta luego, que tenga excelente día")
